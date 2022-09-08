@@ -4,7 +4,7 @@ import TodoTask from "./Components/TodoTask";
 import { ITask } from "./Interfaces";
 
 const App: FC = () => {
-  const [task, setTask] = useState<String>("");
+  const [task, setTask] = useState<string>("");
   const [deadline, setDeadline] = useState<number>(0);
   const [todoList, setTodoList] = useState<ITask[]>([]);
 
@@ -25,10 +25,10 @@ const App: FC = () => {
     setTask("");
     setDeadline(0);
   };
-  const completeTask = (TaskNameToDelete: String): void => {
+  const completeTask = (taskNameToDelete: string): void => {
     setTodoList(
       todoList.filter((task) => {
-        return task.taskName !== TaskNameToDelete;
+        return task.taskName !== taskNameToDelete;
       })
     );
   };
